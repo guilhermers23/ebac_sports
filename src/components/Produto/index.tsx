@@ -1,17 +1,17 @@
-import { Produto as ProdutoType } from '../../App'
-import * as S from './styles'
+import { Produto as ProdutoType } from '../../App';
+import * as S from './styles';
 
 type Props = {
-  produto: ProdutoType
-  aoComprar: (produto: ProdutoType) => void
-  favoritar: (produto: ProdutoType) => void
-  estaNosFavoritos: boolean
-}
+  produto: ProdutoType;
+  aoComprar: (produto: ProdutoType) => void;
+  favoritar: (produto: ProdutoType) => void;
+  estaNosFavoritos: boolean;
+};
 
 export const paraReal = (valor: number) =>
   new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
     valor
-  )
+  );
 
 const ProdutoComponent = ({
   produto,
@@ -37,7 +37,7 @@ const ProdutoComponent = ({
         Adicionar ao carrinho
       </S.BtnComprar>
     </S.Produto>
-  )
-}
+  );
+};
 
-export default ProdutoComponent
+export default ProdutoComponent;
