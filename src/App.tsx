@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Produtos from './containers/Produtos';
 
@@ -13,9 +13,7 @@ export type Produto = {
   imagem: string;
 };
 
-function App() {
-  //Excluir essas constantes
-  const [produtos, setProdutos] = useState<Produto[]>([]);
+const App = () => {
   const [favoritos, setFavoritos] = useState<Produto[]>([]);
 
   //Redux feito em carrinho
@@ -37,6 +35,6 @@ function App() {
       </div>
     </Provider>
   );
-}
+};
 
 export default App;
